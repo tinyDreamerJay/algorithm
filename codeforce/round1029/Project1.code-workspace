@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"path": "C:/IMPORTANT AFFAIR/code/Project1"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"iostream": "cpp",
+			"map": "cpp",
+			"xstring": "cpp",
+			"xiosbase": "cpp",
+			"queue": "cpp",
+			"ostream": "cpp",
+			"algorithm": "cpp",
+			"list": "cpp",
+			"vector": "cpp"
+		}
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": []
+	}
+}
