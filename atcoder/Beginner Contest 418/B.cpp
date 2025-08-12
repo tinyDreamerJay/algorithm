@@ -3,6 +3,7 @@
 #include<iostream>
 #include<cmath>
 #include<map>
+#include<iomanip>
 #include<queue>
 #include<algorithm>
 #include<set>
@@ -18,28 +19,27 @@ using namespace std;
 #define Inf32 1000000005
 #define Inf64 4000000000000000001LL
 const int N = 1e5+100;
-int value[N];
-int dp[N];
 void solve(){
-    int n;
-    while (ci n)
-    {   
-        rep1(i,n){
-            ci value[i];
-        }
-        string s;
-        ci s;
-        s = s;
-        dp[0] = dp[1] = 0;
-        for(int i = 2; i <= n; i++){
-            dp[i] = dp[i-1];
-            if(s[i-1] != s[i-2]){
-                dp[i] = max(dp[i], dp[i-2] + value[i-1] + value[i]);
+    string s;
+    ci s;
+    int cntT=0;
+    int firT;
+    int lastT;
+    double ans = 0;
+    rep0(i,s.size()){
+        if(s[i]=='t'){
+            cntT = 1;
+            for (int j = i+1; j < s.size(); j++)
+            {   
+                if(s[j]=='t')
+                cntT++;
+                if(cntT>=3){
+                    ans = max(ans,((double)cntT-2.0)/((double)j-(double)i-1.0));
+                }
             }
         }
-        
-        ct dp[n] en;
     }
+    cout<<fixed<<setprecision(25)<<ans;
 }
 signed main(){
     ios::sync_with_stdio(0);

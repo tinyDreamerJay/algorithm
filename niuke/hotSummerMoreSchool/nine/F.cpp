@@ -18,27 +18,22 @@ using namespace std;
 #define Inf32 1000000005
 #define Inf64 4000000000000000001LL
 const int N = 1e5+100;
-int value[N];
-int dp[N];
 void solve(){
-    int n;
-    while (ci n)
+    int T;
+    ci T;
+    while (T--)
     {   
-        rep1(i,n){
-            ci value[i];
-        }
-        string s;
-        ci s;
-        s = s;
-        dp[0] = dp[1] = 0;
-        for(int i = 2; i <= n; i++){
-            dp[i] = dp[i-1];
-            if(s[i-1] != s[i-2]){
-                dp[i] = max(dp[i], dp[i-2] + value[i-1] + value[i]);
-            }
-        }
-        
-        ct dp[n] en;
+        int sx1,sy1,sx2,sy2,tx1,ty1,tx2,ty2;
+        ci sx1>>sy1>>sx2>>sy2>>tx1>>ty1>>tx2>>ty2;
+        int cnt=0;
+        int cnt1 =0;
+        cnt1 += max(abs(tx1-sx1),abs(ty1-sy1));
+        cnt1 += max(abs(tx2-sx2),abs(ty2-sy2));
+        int cnt2 = 0;
+        cnt2 += max(abs(tx1-sx2),abs(ty1-sy2));
+        cnt2 += max(abs(tx2-sx1),abs(ty2-sy1));
+        cnt = min(cnt1,cnt2);
+        ct cnt en;
     }
 }
 signed main(){

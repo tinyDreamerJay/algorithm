@@ -19,8 +19,8 @@ using namespace std;
 const int N = 1e5+100;
 
 int nums[N];
-int tree[N * 100];
-int mark[N * 100];
+int tree[N * 4];
+int mark[N * 4];
 inline void push_down(int p,int len){
     mark[p*2] += mark[p];
     mark[p*2+1] += mark[p];

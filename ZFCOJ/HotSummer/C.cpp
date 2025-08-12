@@ -8,7 +8,6 @@ void dfs(int num){
     if (num>n)
     {   
         return;
-        /* code */
     }
     if (num==n)
     {   
