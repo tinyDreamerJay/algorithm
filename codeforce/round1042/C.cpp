@@ -33,44 +33,29 @@ void solve(){
         int k;
         ci n;
         ci k;
-        rep1(i,n){
-            ci S[i];
-        }
-        rep1(i,n){
-            ci T[i];
-        }
-        if(k==1){
-            ct "YES" en;
-            continue;
-        }
-        rep1(i,n){
-            S[i] = S[i]%k;
-            T[i] = T[i]%k;
-        }
-        sort(S+1,S+1+n);
-        sort(T+1,T+1+n,cmp);
-        bool ans = true;
-        bool same = true;
-        rep1(i,n){
-            if(S[i]!=T[i]){
-                same = false;
+        vector<int> a(n);
+        vector<int> b(n);
+        unordered_map<int,int> mp;
+        rep0(i,n) ci a[i];
+        rep0(i,n) ci b[i];
+        for(int num:a) mp[num%k]++;
+        bool f = true;
+        for(int num:b){
+            if(mp[num%k]>0){
+                mp[num%k]--;
+            }else if(mp[k-num%k]>0){
+                mp[k-num%k]--;
+            }else
+            {   
+                f =false;
                 break;
             }
-        }
-        if(same){
+        } 
+        if(f){
             ct "YES" en;
-            continue;
+        }else{
+            ct "NO" en;
         }
-        rep1(i,n){
-            if(S[i]+T[i]!=k){
-                ans = false;
-                break;
-            }
-        }
-        if(ans)
-        ct "YES" en;
-        else
-        ct "NO" en;
     }
 }
 signed main(){
