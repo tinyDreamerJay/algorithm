@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<string>
+#include<iostream>
+#include<cmath>
+#include<map>
+#include<queue>
+#include<algorithm>
+#include<set>
+#include<unordered_map>
+using namespace std;
+#define int long long
+#define rep(i,n) for (int i = 0; i < (n); ++i)
+#define ci cin>>
+#define ct cout<<
+#define en <<'\n'
+#define r0 return 0
+#define Inf32 1000000005
+#define Inf64 4000000000000000001LL
+const int N = 1e5+100;
+void slove(){
+    int T;
+    ci T;
+    while (T--)
+    {
+        int n,m,k;
+        ci n;
+        ci m;
+        ci k;
+        vector<vector<int>> mp;
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= m; j++)
+            {
+                int tmp;
+                ci tmp;
+                mp[i].push_back(tmp);
+            }
+        }
+    }
+}
+signed main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+	slove();
+    r0;
+}
